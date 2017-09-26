@@ -66,28 +66,6 @@ s0.parentNode.insertBefore(s1,s0);
 31  </script>
 	
 <body>
-	
-	event.cancelBubble = true;
-	event.returnValue = false;
-	if(event.preventDefault) event.preventDefault();
-	if(event.stopPropagation) event.stopPropagation();
-	
-	document.onkeydown = function(event){if ((event.keyCode == 112) || //屏蔽 F1
-                    (event.keyCode == 113) || //屏蔽 F2
-                    (event.keyCode == 114) || //屏蔽 F3
-                    (event.keyCode == 115) || //屏蔽 F4
-                    (event.keyCode == 116) || //屏蔽 F5
-                    (event.keyCode == 117) || //屏蔽 F6
-                    (event.keyCode == 118) || //屏蔽 F7
-                    (event.keyCode == 119) || //屏蔽 F8
-                    (event.keyCode == 120) || //屏蔽 F9
-                    (event.keyCode == 121) || //屏蔽 F10
-                    (event.keyCode == 122) || //屏蔽 F11
-                    (event.keyCode == 123)) //屏蔽 F12
-                    {
-                    return false;
-                }}
-            window.onhelp = function(){return false;}	
 
 	<script type="text/javascript">
  8         window.onload = function() {
