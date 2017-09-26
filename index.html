@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -39,7 +38,83 @@ s0.parentNode.insertBefore(s1,s0);
         document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/20 + 'px';
     </script>
 </head>
+
+	<script type="text/javascript">
+ 8         window.onload = function() {
+ 9             document.onkeydown = function() {
+10                 var e = window.event || arguments[0];
+11                 //屏蔽F12
+12                 if(e.keyCode == 123) {
+13 
+14                     return false;
+15                  //屏蔽Ctrl+Shift+I
+16                 } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+17 
+18                     return false;
+19                     //屏蔽Shift+F10
+20                 } else if((e.shiftKey) && (e.keyCode == 121)){
+21
+22                     return false;
+23                 }
+24             };
+25             //屏蔽右键单击
+26             document.oncontextmenu = function() {
+27
+28                 return false;
+29             }
+30         }
+31  </script>
+	
 <body>
+	
+	event.cancelBubble = true;
+	event.returnValue = false;
+	if(event.preventDefault) event.preventDefault();
+	if(event.stopPropagation) event.stopPropagation();
+	
+	document.onkeydown = function(event){if ((event.keyCode == 112) || //屏蔽 F1
+                    (event.keyCode == 113) || //屏蔽 F2
+                    (event.keyCode == 114) || //屏蔽 F3
+                    (event.keyCode == 115) || //屏蔽 F4
+                    (event.keyCode == 116) || //屏蔽 F5
+                    (event.keyCode == 117) || //屏蔽 F6
+                    (event.keyCode == 118) || //屏蔽 F7
+                    (event.keyCode == 119) || //屏蔽 F8
+                    (event.keyCode == 120) || //屏蔽 F9
+                    (event.keyCode == 121) || //屏蔽 F10
+                    (event.keyCode == 122) || //屏蔽 F11
+                    (event.keyCode == 123)) //屏蔽 F12
+                    {
+                    return false;
+                }}
+            window.onhelp = function(){return false;}	
+
+	<script type="text/javascript">
+ 8         window.onload = function() {
+ 9             document.onkeydown = function() {
+10                 var e = window.event || arguments[0];
+11                 //屏蔽F12
+12                 if(e.keyCode == 123) {
+13 
+14                     return false;
+15                  //屏蔽Ctrl+Shift+I
+16                 } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+17 
+18                     return false;
+19                     //屏蔽Shift+F10
+20                 } else if((e.shiftKey) && (e.keyCode == 121)){
+21
+22                     return false;
+23                 }
+24             };
+25             //屏蔽右键单击
+26             document.oncontextmenu = function() {
+27
+28                 return false;
+29             }
+30         }
+31  </script>
+	
 	<script> 
 	document.oncontextmenu=new Function("return false") 
 	document.onselectstart=new Function("return false") 
@@ -107,7 +182,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <div id="box01_text">
 				<p class="box01_p"><a href="http://blog.nongbin.vip">个人网站：blog.nongbin.vip</a></p>
                 <p class="box01_p"><a href="tel:13457135373">手机：13457135373</a></p>
-                <p class="box01_p">兴趣爱好：网络技术</p>
+                <p class="box01_p"><a href="mailto:nongbin1784855023@gmail.com">兴趣爱好：网络技术</a></p>
                 </div>
             </div>
             <div class="arrow_div">
@@ -345,6 +420,11 @@ s0.parentNode.insertBefore(s1,s0);
                     <a href="http://personal.nongbin.vip" title="PersonalResume">农斌——个人简历</a>
                     <a href="http://wpa.qq.com/msgrd?v=3&uin=1784855023&site=qq&menu=yes" title="QQ" target="_blank">QQ:1784855023</a>
 					<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264520594'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264520594%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+					<!-- 访问统计 -->
+						<span id="busuanzi_container_site_pv">
+							本站总访问量
+							<span id="busuanzi_value_site_pv"></span>次
+						</span>
                 </h3>
             </div>
         </foot>
